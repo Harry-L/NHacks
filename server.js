@@ -7,7 +7,7 @@ function start(route, handle) {
     function onRequest(request, response) {
         if(request.to && request.from && request.body) {
             response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
-            response.write(request.to + " " + request.from + " " + request.body);
+            response.write(request.To + " " + request.From + " " + request.Body);
             response.end();
         }
 
