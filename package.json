@@ -19,7 +19,7 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Harry-L/NHacks/issues"
-  }
+  },
   "engines": {
       "node": "0.10.25"
   }
