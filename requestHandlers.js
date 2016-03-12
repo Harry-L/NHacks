@@ -1,7 +1,7 @@
 function textResponse(response, postData) {
     console.log("request handler textResponse called");
     response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
-    response.write("to: " + postData.To + " From: " + postData.From + " body: " + postData.From);
+    response.write("to: " + postData.To + " From: " + postData.From + " body: " + postData.Body);
     response.end();
 }
 
