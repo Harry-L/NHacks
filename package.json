@@ -4,7 +4,8 @@
   "description": "BringMeBack",
   "main": "index.js",
   "dependencies": {
-    "twilio": "^2.9.0"
+    "twilio": "^2.9.0",
+    "request": "^2.67.0"
   },
   "devDependencies": {},
   "scripts": {
