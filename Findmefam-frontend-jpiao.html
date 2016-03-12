@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <title> Find me fam
-      </title>
-      <style>
-          
+    <title> Find me fam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <style>
+        
         #map {
-          width: 1370px;
-          height: 820px;
-          z-index: -1;
-          height: 100%;
-          position: absolute; 
-          top: 0; 
-          bottom: -200px; 
-          left: 0; 
-          right: 0; 
+        width: cover;
+        height: cover;
+        z-index: -1;
+        height: 100%;
+        position: absolute; 
+        top: 0; 
+        bottom: -200px; 
+        left: 0; 
+        right: 0; 
         }
 
         #h {
@@ -38,7 +43,7 @@
           z-index: 0;
           position: absolute;
           right: 580px;
-          top: 220px;
+          top: 230px;
           text-align: center;
         }
         
@@ -56,18 +61,18 @@
           z-index: 0;
           position: absolute;
           right: 580px;
-          top: 450px;
+          top: 460px;
           text-align: center;
         }
         
 </style>
-
+      
   </head>
   <body onload="initialize()">
 
       <div id="map"></div>
 
-      <h1 id = "h">'Find Me Fam! <br>Send Help!'</h1> 
+      <h1 id = "h">Find Me Fam! <br>Send Help!</h1> 
       
       <div id="floating-panel1">
       <input id="address" type="textbox" value="">
@@ -81,10 +86,10 @@
       </div>
           
                 <form id="inputs">
-        Phone Number:<br>
+        <strong>Phone Number:</strong><br>
         <input type="text" name="number">
         <br>
-        Alternative Number:<br>
+        <strong>Alternative Number:</strong><br>
         <input type="text" name="alternative">
     </form>
     <br> 
@@ -147,6 +152,7 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
+
 
   </body>
 </html>
