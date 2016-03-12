@@ -6,61 +6,81 @@
       <style>
           
         #map {
-        width: 1550px;
-        height: 820px;
-        z-index: -1;
-        height: 100%;
-        position: absolute; 
-        top: 0; 
-        bottom: -200px; 
-        left: 0; 
-        right: 0; 
+          width: 1370px;
+          height: 820px;
+          z-index: -1;
+          height: 100%;
+          position: absolute; 
+          top: 0; 
+          bottom: -200px; 
+          left: 0; 
+          right: 0; 
         }
-        #h {
-        z-index: 0;
-            
-        text-align: right;
-            
-        }
-        #forms {
-        border-left-width: thin;
-        border-right-width: thin;
-        position: absolute;
-        z-index: 0;
-        text-align: right;
-        }
-        form {
-        z-index: 0;
-        text-align: right;
-        }
-        
-        #right {
-            text-align: right;
-        }
-        
 
-      
+        #h {
+          z-index: 0;  
+          width: 250px;
+          position: absolute;
+          text-align: center;
+          right: 560px;
+        }
+
+        #inputs {
+          width: 200px;
+          z-index: 0;
+          position: absolute;
+          right: 580px;
+          top: 130px;
+        }
+
+        form {
+          width: 200px;
+          z-index: 0;
+          position: absolute;
+          right: 580px;
+          top: 220px;
+          text-align: center;
+        }
+        
+        #floating-panel1 {
+          width: 200px;
+          z-index: 0;
+          position: absolute;
+          right: 580px;
+          top: 400px;
+          text-align: center;
+        }
+
+        #floating-panel2 {
+          width: 200px;
+          z-index: 0;
+          position: absolute;
+          right: 580px;
+          top: 450px;
+          text-align: center;
+        }
+        
 </style>
-      
+
   </head>
-    <div id = right>
   <body onload="initialize()">
-       <h1 id = h>'Find Me Fam! Send Help!'</h1> 
+
       <div id="map"></div>
-      <br>
-      <br>
-     
-      <div id="floating-panel">
+
+      <h1 id = "h">'Find Me Fam! <br>Send Help!'</h1> 
+      
+      <div id="floating-panel1">
       <input id="address" type="textbox" value="">
       <input id="encode" type="button" value="Enter current location ">
       </div>
 
-      <div id="floating-panel">
+      <div id="floating-panel2">
       <input id="latlng" type="text" value="">
       <input id="decode" type="button" value="Enter geo coordinates">
-          <br>
-          <br>
-                <form>
+      <br>
+      </div>
+          
+                <form id="inputs">
         Phone Number:<br>
         <input type="text" name="number">
         <br>
@@ -68,24 +88,16 @@
         <input type="text" name="alternative">
     </form>
     <br> 
-<form action="action_page.php">
-<input type="submit" value="Submit">
-</form> 
-      </div>
-
-      <div id="forms">
-      <br>
-         
-     
-      </div> </div>
-      
+    <form action="action_page.php">
+    <input type="submit" value="Submit">
+    </form> 
 
 
     <script>
        function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 5,
-          center: {lat: -34.397, lng: 150.644}
+          zoom: 6,
+          center: {lat: 42.9837, lng: -81.2497}
         });
         var geocoder = new google.maps.Geocoder();
         var infowindow = new google.maps.InfoWindow;
@@ -135,7 +147,6 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
-
 
   </body>
 </html>
