@@ -18,18 +18,24 @@
         }
         #h {
         z-index: 0;
+
             
         }
-    
+        #forms {
+        width: 200px;
+        position: absolute;
+        z-index: 0;
+        }
         form {
         z-index: 0;
         }
-    
+      
 </style>
       
   </head>
   <body>
-      
+
+      <div id="forms">
       <br>
       
       <h1 id = h>'Find Me Fam! Send Help!'</h1>
@@ -47,20 +53,34 @@
 <form action="action_page.php">
 
 <input type="submit" value="Submit">
+
 </form> 
+
+</div>
+
+
+
 
     <div id="map">
     <script>
-      function initMap() {
-        var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv, {
-          center: {lat: 44.540, lng: -78.546},
-          zoom: 8
-        });
-      }
+     function initMap() {
+     var map = new google.maps.Map(document.getElementById('map'), {
+     zoom: 8,
+     center: {lat: 40.731, lng: -73.997}
+     });
+     var geocoder = new google.maps.Geocoder;
+     var infowindow = new google.maps.InfoWindow;
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeLatLng(geocoder, map, infowindow);
+  });
+}
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
         </div>
+
+
   </body>
 </html>
