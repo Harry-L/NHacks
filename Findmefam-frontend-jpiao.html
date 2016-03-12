@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title> Find me fam
+      </title>
+      <style>
+          
+        #map {
+        width: 1700px;
+        height: 820px;
+        z-index: -1;
+        height: 100%;
+        position: absolute; 
+        top: 0; 
+        bottom: -200px; 
+        left: 0; 
+        right: 0; 
+        }
+        #h {
+        z-index: 0;
+            
+        }
+    
+        form {
+        z-index: 0;
+        }
+    
+</style>
+      
+  </head>
+  <body>
+      
+      <br>
+      
+      <h1 id = h>'Find Me Fam! Send Help!'</h1>
+     
+      <form>
+        Phone Number:<br>
+        <input type="text" name="number">
+        <br>
+        <br>
+        Alternative Number:<br>
+        <input type="text" name="alternative">
+    </form>
+    <br>
+    
+<form action="action_page.php">
+
+<input type="submit" value="Submit">
+</form> 
+
+    <div id="map">
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+        </div>
+  </body>
+</html>
