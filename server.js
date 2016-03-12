@@ -6,7 +6,9 @@ var twilioComp = require("./twilioComp");
 function start(route, handle) {
     function onRequest(request, response) {
         if(request.to && request.from && request.body) {
-            console.log(request.to + " " + request.from + " " + request.body);
+            response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
+            response.write(request.to + " " + request.from + " " + request.body);
+            response.end();
         }
 
         else {
