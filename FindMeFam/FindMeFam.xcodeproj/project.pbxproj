@@ -7,33 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A6D95EB1C945BD100CCBED8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D95EA1C945BD100CCBED8 /* SettingsViewController.swift */; };
-		4A6D95ED1C945C7600CCBED8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D95EC1C945C7600CCBED8 /* MenuViewController.swift */; };
-		4AF728521C509468005CF4A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728511C509468005CF4A3 /* AppDelegate.swift */; };
-		4AF728541C509468005CF4A3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728531C509468005CF4A3 /* FirstViewController.swift */; };
-		4AF728561C509468005CF4A3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728551C509468005CF4A3 /* SecondViewController.swift */; };
-		4AF728591C509468005CF4A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF728571C509468005CF4A3 /* Main.storyboard */; };
-		4AF7285B1C509468005CF4A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF7285A1C509468005CF4A3 /* Assets.xcassets */; };
-		4AF7285E1C509468005CF4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF7285C1C509468005CF4A3 /* LaunchScreen.storyboard */; };
-		4AF728661C509564005CF4A3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728651C509564005CF4A3 /* ContainerViewController.swift */; };
+		4A6D95FB1C9468BB00CCBED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D95FA1C9468BB00CCBED8 /* AppDelegate.swift */; };
+		4A6D96001C9468BB00CCBED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D95FE1C9468BB00CCBED8 /* Main.storyboard */; };
+		4A6D96021C9468BB00CCBED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D96011C9468BB00CCBED8 /* Assets.xcassets */; };
+		4A6D96051C9468BB00CCBED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D96031C9468BB00CCBED8 /* LaunchScreen.storyboard */; };
+		4A6D960F1C94700800CCBED8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D960E1C94700800CCBED8 /* PageViewController.swift */; };
+		4A6D96111C9478F300CCBED8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96101C9478F300CCBED8 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A6D95EA1C945BD100CCBED8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		4A6D95EC1C945C7600CCBED8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		4AF7284E1C509468005CF4A3 /* FindMeFam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMeFam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AF728511C509468005CF4A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AF728531C509468005CF4A3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		4AF728551C509468005CF4A3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		4AF728581C509468005CF4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4AF7285A1C509468005CF4A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4AF7285D1C509468005CF4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4AF7285F1C509468005CF4A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AF728651C509564005CF4A3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		4A6D95F71C9468BB00CCBED8 /* FindMeFam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMeFam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6D95FA1C9468BB00CCBED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A6D95FF1C9468BB00CCBED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A6D96011C9468BB00CCBED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A6D96041C9468BB00CCBED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A6D96061C9468BB00CCBED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A6D960E1C94700800CCBED8 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		4A6D96101C9478F300CCBED8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4AF7284B1C509468005CF4A3 /* Frameworks */ = {
+		4A6D95F41C9468BB00CCBED8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,35 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4AF728451C509468005CF4A3 = {
+		4A6D95EE1C9468BB00CCBED8 = {
 			isa = PBXGroup;
 			children = (
-				4AF728501C509468005CF4A3 /* FindMeFam */,
-				4AF7284F1C509468005CF4A3 /* Products */,
+				4A6D95F91C9468BB00CCBED8 /* FindMeFam */,
+				4A6D95F81C9468BB00CCBED8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4AF7284F1C509468005CF4A3 /* Products */ = {
+		4A6D95F81C9468BB00CCBED8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4AF7284E1C509468005CF4A3 /* FindMeFam.app */,
+				4A6D95F71C9468BB00CCBED8 /* FindMeFam.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4AF728501C509468005CF4A3 /* FindMeFam */ = {
+		4A6D95F91C9468BB00CCBED8 /* FindMeFam */ = {
 			isa = PBXGroup;
 			children = (
-				4AF728511C509468005CF4A3 /* AppDelegate.swift */,
-				4AF728651C509564005CF4A3 /* ContainerViewController.swift */,
-				4AF728531C509468005CF4A3 /* FirstViewController.swift */,
-				4AF728551C509468005CF4A3 /* SecondViewController.swift */,
-				4AF728571C509468005CF4A3 /* Main.storyboard */,
-				4AF7285A1C509468005CF4A3 /* Assets.xcassets */,
-				4AF7285C1C509468005CF4A3 /* LaunchScreen.storyboard */,
-				4AF7285F1C509468005CF4A3 /* Info.plist */,
-				4A6D95EA1C945BD100CCBED8 /* SettingsViewController.swift */,
-				4A6D95EC1C945C7600CCBED8 /* MenuViewController.swift */,
+				4A6D95FA1C9468BB00CCBED8 /* AppDelegate.swift */,
+				4A6D95FE1C9468BB00CCBED8 /* Main.storyboard */,
+				4A6D96011C9468BB00CCBED8 /* Assets.xcassets */,
+				4A6D96031C9468BB00CCBED8 /* LaunchScreen.storyboard */,
+				4A6D96061C9468BB00CCBED8 /* Info.plist */,
+				4A6D960E1C94700800CCBED8 /* PageViewController.swift */,
+				4A6D96101C9478F300CCBED8 /* ViewController.swift */,
 			);
 			path = FindMeFam;
 			sourceTree = "<group>";
@@ -79,40 +70,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4AF7284D1C509468005CF4A3 /* FindMeFam */ = {
+		4A6D95F61C9468BB00CCBED8 /* FindMeFam */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4AF728621C509468005CF4A3 /* Build configuration list for PBXNativeTarget "FindMeFam" */;
+			buildConfigurationList = 4A6D96091C9468BB00CCBED8 /* Build configuration list for PBXNativeTarget "FindMeFam" */;
 			buildPhases = (
-				4AF7284A1C509468005CF4A3 /* Sources */,
-				4AF7284B1C509468005CF4A3 /* Frameworks */,
-				4AF7284C1C509468005CF4A3 /* Resources */,
+				4A6D95F31C9468BB00CCBED8 /* Sources */,
+				4A6D95F41C9468BB00CCBED8 /* Frameworks */,
+				4A6D95F51C9468BB00CCBED8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FindMeFam;
-			productName = 531;
-			productReference = 4AF7284E1C509468005CF4A3 /* FindMeFam.app */;
+			productName = FindMeFam;
+			productReference = 4A6D95F71C9468BB00CCBED8 /* FindMeFam.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4AF728461C509468005CF4A3 /* Project object */ = {
+		4A6D95EF1C9468BB00CCBED8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = HarryLiu;
 				TargetAttributes = {
-					4AF7284D1C509468005CF4A3 = {
-						CreatedOnToolsVersion = 7.2;
+					4A6D95F61C9468BB00CCBED8 = {
+						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 7PS6VF94Y3;
 					};
 				};
 			};
-			buildConfigurationList = 4AF728491C509468005CF4A3 /* Build configuration list for PBXProject "FindMeFam" */;
+			buildConfigurationList = 4A6D95F21C9468BB00CCBED8 /* Build configuration list for PBXProject "FindMeFam" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,58 +111,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 4AF728451C509468005CF4A3;
-			productRefGroup = 4AF7284F1C509468005CF4A3 /* Products */;
+			mainGroup = 4A6D95EE1C9468BB00CCBED8;
+			productRefGroup = 4A6D95F81C9468BB00CCBED8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4AF7284D1C509468005CF4A3 /* FindMeFam */,
+				4A6D95F61C9468BB00CCBED8 /* FindMeFam */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4AF7284C1C509468005CF4A3 /* Resources */ = {
+		4A6D95F51C9468BB00CCBED8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF7285E1C509468005CF4A3 /* LaunchScreen.storyboard in Resources */,
-				4AF7285B1C509468005CF4A3 /* Assets.xcassets in Resources */,
-				4AF728591C509468005CF4A3 /* Main.storyboard in Resources */,
+				4A6D96051C9468BB00CCBED8 /* LaunchScreen.storyboard in Resources */,
+				4A6D96021C9468BB00CCBED8 /* Assets.xcassets in Resources */,
+				4A6D96001C9468BB00CCBED8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4AF7284A1C509468005CF4A3 /* Sources */ = {
+		4A6D95F31C9468BB00CCBED8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF728561C509468005CF4A3 /* SecondViewController.swift in Sources */,
-				4A6D95ED1C945C7600CCBED8 /* MenuViewController.swift in Sources */,
-				4AF728521C509468005CF4A3 /* AppDelegate.swift in Sources */,
-				4AF728661C509564005CF4A3 /* ContainerViewController.swift in Sources */,
-				4AF728541C509468005CF4A3 /* FirstViewController.swift in Sources */,
-				4A6D95EB1C945BD100CCBED8 /* SettingsViewController.swift in Sources */,
+				4A6D96111C9478F300CCBED8 /* ViewController.swift in Sources */,
+				4A6D95FB1C9468BB00CCBED8 /* AppDelegate.swift in Sources */,
+				4A6D960F1C94700800CCBED8 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4AF728571C509468005CF4A3 /* Main.storyboard */ = {
+		4A6D95FE1C9468BB00CCBED8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4AF728581C509468005CF4A3 /* Base */,
+				4A6D95FF1C9468BB00CCBED8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4AF7285C1C509468005CF4A3 /* LaunchScreen.storyboard */ = {
+		4A6D96031C9468BB00CCBED8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4AF7285D1C509468005CF4A3 /* Base */,
+				4A6D96041C9468BB00CCBED8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -179,7 +167,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4AF728601C509468005CF4A3 /* Debug */ = {
+		4A6D96071C9468BB00CCBED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,11 +208,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4AF728611C509468005CF4A3 /* Release */ = {
+		4A6D96081C9468BB00CCBED8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,55 +244,53 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4AF728631C509468005CF4A3 /* Debug */ = {
+		4A6D960A1C9468BB00CCBED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/FindMeFam/Info.plist";
+				INFOPLIST_FILE = FindMeFam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.harryliu.FindMeFam;
-				PRODUCT_NAME = FindMeFam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		4AF728641C509468005CF4A3 /* Release */ = {
+		4A6D960B1C9468BB00CCBED8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/FindMeFam/Info.plist";
+				INFOPLIST_FILE = FindMeFam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.harryliu.FindMeFam;
-				PRODUCT_NAME = FindMeFam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4AF728491C509468005CF4A3 /* Build configuration list for PBXProject "FindMeFam" */ = {
+		4A6D95F21C9468BB00CCBED8 /* Build configuration list for PBXProject "FindMeFam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4AF728601C509468005CF4A3 /* Debug */,
-				4AF728611C509468005CF4A3 /* Release */,
+				4A6D96071C9468BB00CCBED8 /* Debug */,
+				4A6D96081C9468BB00CCBED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4AF728621C509468005CF4A3 /* Build configuration list for PBXNativeTarget "FindMeFam" */ = {
+		4A6D96091C9468BB00CCBED8 /* Build configuration list for PBXNativeTarget "FindMeFam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4AF728631C509468005CF4A3 /* Debug */,
-				4AF728641C509468005CF4A3 /* Release */,
+				4A6D960A1C9468BB00CCBED8 /* Debug */,
+				4A6D960B1C9468BB00CCBED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4AF728461C509468005CF4A3 /* Project object */;
+	rootObject = 4A6D95EF1C9468BB00CCBED8 /* Project object */;
 }

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/Harry/Documents/Projects/NHacks/BringMeBack/FindMeFam.xcodeproj">
+      location = "self:FindMeFam.xcodeproj">
    </FileRef>
 </Workspace>
