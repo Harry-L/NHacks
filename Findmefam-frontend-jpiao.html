@@ -18,7 +18,6 @@
         }
         #h {
         z-index: 0;
-
             
         }
         #forms {
@@ -36,6 +35,9 @@
   <body onload="initialize()">
       <div id="map"></div>
       <div>
+          <br>
+          <br>
+          <br>
       <input id="address" type="textbox" value="-34.397, 150.644">
       <input type="button" value="Encode" onclick="codeAddress()">
       </div>
@@ -78,7 +80,6 @@
     }
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
   }
-
   function codeAddress() {
     var address = document.getElementById("address").value;
     geocoder.geocode( { 'address': address}, function(results, status) {
