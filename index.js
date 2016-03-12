@@ -3,7 +3,7 @@ var router = require("./router");
 var requestHandlers = require("./requestHandlers");
 
 var handle = {};
-handle["/"] = requestHandlers.textReponse;
+handle["/"] = requestHandlers.textResponse;
 handle["/start"] = requestHandlers.start;
 
 console.log("wtf");
