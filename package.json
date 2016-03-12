@@ -1,0 +1,26 @@
+{
+  "name": "NHacks",
+  "version": "0.0.0",
+  "description": "BringMeBack",
+  "main": "index.js",
+  "dependencies": {
+    "twilio": "^2.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Harry-L/NHacks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harry-L/NHacks/issues"
+  }
+  "engines": {
+      "node": "0.10.25"
+  }
+}
