@@ -5,28 +5,22 @@ var twilioComp = require("./twilioComp");
 
 function start(route, handle) {
     function onRequest(request, response) {
-        if(request.To && request.From && request.Body) {
-            response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
-            response.write(request.To + " " + request.From + " " + request.Body);
-            response.end();
-        }
+        var postData = "";
+        var pathName = url.parse(request.url).pathname;
+        console.log("Request for " + pathName + " received.");
 
-        else {
-            var postData = "";
-            var pathName = url.parse(request.url).pathname;
-            console.log("Request for " + pathName + " received.");
+        request.setEncoding("utf8");
 
-            request.setEncoding("utf8");
+        request.addListener("data", function(postDataChunk) {
+            postData += postDataChunk;
+            console.log("Receiver datachunk " + postDataChunk + ".");
+        });
 
-            request.addListener("data", function(postDataChunk) {
-                postData += postDataChunk;
-                console.log("Receiver datachunk " + postDataChunk + ".");
-            });
-
-            request.addListener("end", function() {
-                route(handle, pathName, response, postData);
-            });
-        }
+        request.addListener("end", function() {
+            console.log(postData.To + " " + postData.From + " " + postData.Body);
+            console.log(response.To + " " + response.From + " " + response.Body);
+            //route(handle, pathName, response, postData);
+        });
     }
     http.createServer(onRequest).listen(process.env.PORT);
 }
