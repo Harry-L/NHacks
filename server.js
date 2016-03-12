@@ -5,21 +5,26 @@ var twiliotest = require("./twiliotest");
 
 function start(route, handle) {
     function onRequest(request, response) {
-        var postData = "";
-        var pathName = url.parse(request.url).pathname;
-        console.log("Request for " + pathName + " received.");
+        if(request.to && request.from && request.body) {
+            console.log(request.to + " " + request.from + " " + request.body);
+        }
 
-        request.setEncoding("utf8");
+        else {
+            var postData = "";
+            var pathName = url.parse(request.url).pathname;
+            console.log("Request for " + pathName + " received.");
 
-        request.addListener("data", function(postDataChunk) {
-            postData += postDataChunk;
-            console.log("Receiver datachunk " + postDataChunk + ".");
-        });
+            request.setEncoding("utf8");
 
-        request.addListener("end", function() {
-            route(handle, pathName, response, postData);
-        });
-        
+            request.addListener("data", function(postDataChunk) {
+                postData += postDataChunk;
+                console.log("Receiver datachunk " + postDataChunk + ".");
+            });
+
+            request.addListener("end", function() {
+                route(handle, pathName, response, postData);
+            });
+        }
     }
     http.createServer(onRequest).listen(process.env.PORT);
 }

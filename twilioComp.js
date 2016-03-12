@@ -4,12 +4,12 @@ var client = require('twilio')(accSid, authToken);
 
 var resp = new require('twilio').TwimlResponse();
 
-function sendText() {
+function sendText(targetNum, bodyText) {
     console.log("sending text");
     client.messages.create({
-        to: '+16477854379',
+        to: targetNum,
         from: '+12897960937',
-        body: 'testing123'
+        body: bodyText
     }, function(error, message) {
         if(error)
             console.log(error.message);
