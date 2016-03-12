@@ -6,7 +6,7 @@
       <style>
           
         #map {
-        width: 1700px;
+        width: 1550px;
         height: 820px;
         z-index: -1;
         height: 100%;
@@ -18,48 +18,51 @@
         }
         #h {
         z-index: 0;
-
+            
+        text-align: right;
             
         }
         #forms {
-        width: 200px;
+        border-left-width: thin;
+        border-right-width: thin;
         position: absolute;
         z-index: 0;
+        text-align: right;
         }
         form {
         z-index: 0;
+        text-align: right;
         }
+        
+        #right {
+            text-align: right;
+        }
+        
+
       
 </style>
       
   </head>
+    <div id = right>
   <body onload="initialize()">
+       <h1 id = h>'Find Me Fam! Send Help!'</h1> 
       <div id="map"></div>
       <br>
       <br>
-      <br>
-
-      <div id="floating-panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
-      <input id="encode" type="button" value="Encode">
-      </div>
-
-      <div id="floating-panel">
-      <input id="latlng" type="text" value="40.714224,-73.961452">
-      <input id="decode" type="button" value="Reverse Geocode">
-      </div>
-
-      <div id="forms">
-      <br>
-      
-      <h1 id = h>'Find Me Fam! Send Help!'</h1> 
      
+      <div id="floating-panel">
+      <input id="address" type="textbox" value="">
+      <input id="encode" type="button" value="Enter current location ">
+      </div>
 
-
-      <form>
+      <div id="floating-panel">
+      <input id="latlng" type="text" value="">
+      <input id="decode" type="button" value="Enter geo coordinates">
+          <br>
+          <br>
+                <form>
         Phone Number:<br>
         <input type="text" name="number">
-        <br>
         <br>
         Alternative Number:<br>
         <input type="text" name="alternative">
@@ -68,28 +71,31 @@
 <form action="action_page.php">
 <input type="submit" value="Submit">
 </form> 
-</div>
+      </div>
+
+      <div id="forms">
+      <br>
+         
+     
+      </div> </div>
+      
 
 
     <script>
        function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
+          zoom: 5,
           center: {lat: -34.397, lng: 150.644}
         });
         var geocoder = new google.maps.Geocoder();
         var infowindow = new google.maps.InfoWindow;
-
         document.getElementById('encode').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });
-
         document.getElementById('decode').addEventListener('click', function() {
           geocodeLatLng(geocoder, map, infowindow);
         });
       }
-
-
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
@@ -104,7 +110,6 @@
           }
         });
       }
-
       function geocodeLatLng(geocoder, map, infowindow) {
         var input = document.getElementById('latlng').value;
         var latlngStr = input.split(',', 2);
@@ -112,7 +117,7 @@
         geocoder.geocode({'location': latlng}, function(results, status) {
           if (status === google.maps.GeocoderStatus.OK) {
             if (results[1]) {
-              map.setZoom(11);
+              map.setZoom(6);
               var marker = new google.maps.Marker({
                 position: latlng,
                 map: map
@@ -127,7 +132,6 @@
           }
         });
       }
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
