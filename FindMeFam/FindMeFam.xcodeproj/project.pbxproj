@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6D95EB1C945BD100CCBED8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D95EA1C945BD100CCBED8 /* SettingsViewController.swift */; };
+		4A6D95ED1C945C7600CCBED8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D95EC1C945C7600CCBED8 /* MenuViewController.swift */; };
 		4AF728521C509468005CF4A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728511C509468005CF4A3 /* AppDelegate.swift */; };
 		4AF728541C509468005CF4A3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728531C509468005CF4A3 /* FirstViewController.swift */; };
 		4AF728561C509468005CF4A3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728551C509468005CF4A3 /* SecondViewController.swift */; };
@@ -14,10 +16,11 @@
 		4AF7285B1C509468005CF4A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AF7285A1C509468005CF4A3 /* Assets.xcassets */; };
 		4AF7285E1C509468005CF4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF7285C1C509468005CF4A3 /* LaunchScreen.storyboard */; };
 		4AF728661C509564005CF4A3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728651C509564005CF4A3 /* ContainerViewController.swift */; };
-		4AF728681C50BBA4005CF4A3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF728671C50BBA4005CF4A3 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A6D95EA1C945BD100CCBED8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4A6D95EC1C945C7600CCBED8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4AF7284E1C509468005CF4A3 /* FindMeFam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMeFam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF728511C509468005CF4A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF728531C509468005CF4A3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +30,6 @@
 		4AF7285D1C509468005CF4A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AF7285F1C509468005CF4A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AF728651C509564005CF4A3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		4AF728671C50BBA4005CF4A3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 				4AF7285A1C509468005CF4A3 /* Assets.xcassets */,
 				4AF7285C1C509468005CF4A3 /* LaunchScreen.storyboard */,
 				4AF7285F1C509468005CF4A3 /* Info.plist */,
-				4AF728671C50BBA4005CF4A3 /* MenuViewController.swift */,
+				4A6D95EA1C945BD100CCBED8 /* SettingsViewController.swift */,
+				4A6D95EC1C945C7600CCBED8 /* MenuViewController.swift */,
 			);
 			path = FindMeFam;
 			sourceTree = "<group>";
@@ -146,10 +149,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF728561C509468005CF4A3 /* SecondViewController.swift in Sources */,
-				4AF728681C50BBA4005CF4A3 /* MenuViewController.swift in Sources */,
+				4A6D95ED1C945C7600CCBED8 /* MenuViewController.swift in Sources */,
 				4AF728521C509468005CF4A3 /* AppDelegate.swift in Sources */,
 				4AF728661C509564005CF4A3 /* ContainerViewController.swift in Sources */,
 				4AF728541C509468005CF4A3 /* FirstViewController.swift in Sources */,
+				4A6D95EB1C945BD100CCBED8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/BringMeBack/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FindMeFam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.harryliu.FindMeFam;
 				PRODUCT_NAME = FindMeFam;
@@ -273,7 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/BringMeBack/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FindMeFam/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.harryliu.FindMeFam;
 				PRODUCT_NAME = FindMeFam;

@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  SettingsViewController.swift
 //  FindMeFam
 //
 //  Created by Harry Liu on 2016-03-12.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UITableViewController {
+class SettingsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
