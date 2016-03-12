@@ -1,6 +1,6 @@
 var http = require("http");
 var url = require("url");
-var twiliotest = require("./twiliotest");
+var twilioComp = require("./twilioComp");
 
 
 function start(route, handle) {
