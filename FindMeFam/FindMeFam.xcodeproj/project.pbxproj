@@ -13,6 +13,9 @@
 		4A6D96051C9468BB00CCBED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6D96031C9468BB00CCBED8 /* LaunchScreen.storyboard */; };
 		4A6D960F1C94700800CCBED8 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D960E1C94700800CCBED8 /* PageViewController.swift */; };
 		4A6D96111C9478F300CCBED8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96101C9478F300CCBED8 /* ViewController.swift */; };
+		4A6D96131C947F2B00CCBED8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96121C947F2B00CCBED8 /* LocationViewController.swift */; };
+		4A6D96151C94CC7700CCBED8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6D96141C94CC7700CCBED8 /* MapKit.framework */; };
+		4A6D96171C94CF0700CCBED8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96161C94CF0700CCBED8 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		4A6D96061C9468BB00CCBED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6D960E1C94700800CCBED8 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		4A6D96101C9478F300CCBED8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A6D96121C947F2B00CCBED8 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		4A6D96141C94CC7700CCBED8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4A6D96161C94CF0700CCBED8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6D96151C94CC7700CCBED8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 		4A6D95EE1C9468BB00CCBED8 = {
 			isa = PBXGroup;
 			children = (
+				4A6D96141C94CC7700CCBED8 /* MapKit.framework */,
 				4A6D95F91C9468BB00CCBED8 /* FindMeFam */,
 				4A6D95F81C9468BB00CCBED8 /* Products */,
 			);
@@ -63,6 +71,8 @@
 				4A6D96061C9468BB00CCBED8 /* Info.plist */,
 				4A6D960E1C94700800CCBED8 /* PageViewController.swift */,
 				4A6D96101C9478F300CCBED8 /* ViewController.swift */,
+				4A6D96121C947F2B00CCBED8 /* LocationViewController.swift */,
+				4A6D96161C94CF0700CCBED8 /* MapViewController.swift */,
 			);
 			path = FindMeFam;
 			sourceTree = "<group>";
@@ -100,6 +110,11 @@
 					4A6D95F61C9468BB00CCBED8 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 7PS6VF94Y3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -142,6 +157,8 @@
 				4A6D96111C9478F300CCBED8 /* ViewController.swift in Sources */,
 				4A6D95FB1C9468BB00CCBED8 /* AppDelegate.swift in Sources */,
 				4A6D960F1C94700800CCBED8 /* PageViewController.swift in Sources */,
+				4A6D96171C94CF0700CCBED8 /* MapViewController.swift in Sources */,
+				4A6D96131C947F2B00CCBED8 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +306,7 @@
 				4A6D960B1C9468BB00CCBED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
