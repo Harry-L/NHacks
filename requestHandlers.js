@@ -20,7 +20,7 @@ function textResponse(response, postData) {
 
     else if(/^find my fam/i.test(postData.Body)) { // user sends text , find my fam 'phonenumber'
         var target = postData.Body.match(/\+\d{10}/)[0];
-        var arr = postData.Body.match(/-?\d+\.?\d*/g);i
+        var arr = postData.Body.match(/-?\d+\.?\d*/g);
         var arr2 = arr.map(parseFloat);
         arr = arr2.filter(function(num) {return num <= 1000});
         if(!target || arr.length != 2) {
