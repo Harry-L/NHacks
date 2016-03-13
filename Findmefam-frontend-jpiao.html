@@ -102,11 +102,12 @@
       var number = document.getElementById("inputs").elements.number.value;
       xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-          document.getElementById("latlng").innerHTML = xmlhttp.responseText;
+          document.getElementById("latlng").innerHTML = xhttp.responseText;
         }
       };
-      xhttp.open("POST","action_page.php?q=" + number, true);
-      xhttp.send();
+      xhttp.open("POST","http://still-eyrie-93764.herokuapp.com/request", true);
+      xhttp.setRequestHeader("Content-Type", "text/plain");
+      xhttp.send(number);
 
       }
 
