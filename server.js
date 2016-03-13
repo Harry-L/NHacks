@@ -22,6 +22,8 @@ function start(route, handle) {
             var post = querystring.parse(postData);
             if(post.To && post.From && post.Body)
                 route(handle, pathName, response, post);
+            else if(pathName === "/request")
+                route(handle, pathName, response, postData);
             else
                 route(handle, "/start", response, postData);
         });

@@ -61,6 +61,12 @@ function textResponse(response, postData) {
     }
 }
 
+function request(response, postData) {
+   mypsql.get(postData, function(result) {
+        sendError(result.lastlat ", " + result.lastlng, response);
+   });
+}
+
 function sendError(text, response) {
     response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
     response.write(text);
@@ -76,3 +82,4 @@ function start(response, postData) {
 
 exports.textResponse = textResponse;
 exports.start = start;
+exports.request = request;
