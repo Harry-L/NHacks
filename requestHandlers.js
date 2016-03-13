@@ -19,7 +19,7 @@ function textResponse(response, postData) {
     }
 
     else if(/^find my fam/i.test(postData.Body)) { // user sends text , find my fam 'phonenumber'
-        var target = postData.Body.match(/+\d{10}/)[0];
+        var target = postData.Body.match(/\+\d{10}/)[0];
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
         if(!target || arr.length != 2) {
             sendError('Bad arguments!', response); 
@@ -31,7 +31,7 @@ function textResponse(response, postData) {
         }
     }
     else if(/^bring my fam/i.test(postData.Body)) { // fam sends text , bring my fam 'phonenumber'
-        var target = postData.Body.match(/+\d{10}/)[0];
+        var target = postData.Body.match(/\+\d{10}/)[0];
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
         if(!target || arr.length != 2) {
             sendError('Bad arguments!', response);
@@ -39,7 +39,7 @@ function textResponse(response, postData) {
         else {
             mypsql.get(target, function(result) {
                 if(result.islooking && result.famphone === postData.From) {
-                    mapsStuff.getDirs({lat: result.lastlat, lng: result.lastlng}, {lat: arr[0], lng: add[1]}, function(text) {twilioComp.sendText(target, text)});
+                    mapsStuff.getDirs({lat: result.lastlat, lng: result.lastlng}, {lat: arr[0], lng: add[1]}, function(text) {twilioComp.sendText(target, text);});
                     sendError('Your fam will be fine!', response);
                     mypsql.resetFam(target);
                 }
