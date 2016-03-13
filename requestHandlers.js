@@ -45,7 +45,7 @@ function textResponse(response, postData) {
         else {
             mypsql.get(target, function(result) {
                 if(result.islooking && result.famphone === postData.From) {
-                    mapsStuff.getDirs({lat: result.lastlat, lng: result.lastlng}, {lat: arr[0], lng: add[1]}, function(text) {twilioComp.sendText(target, text);});
+                    mapsStuff.getDirs({lat: result.lastlat, lng: result.lastlng}, {lat: arr[0], lng: arr[1]}, function(text) {twilioComp.sendText(target, text);});
                     sendError('Your fam will be fine!', response);
                     mypsql.resetFam(target);
                 }
