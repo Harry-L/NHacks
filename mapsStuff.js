@@ -58,12 +58,17 @@ function getDirs(orig, dest, response) {
                     console.log("bodyObj.routes[0] defined");
                     var responseString = "";
                     var steps = bodyObj.routes[0].legs[0].steps;
+                    var total = "";
                     steps.forEach(function(step) {
                         var instructions = step.html_instructions;
                         instructions = instructions.replace(/(\<)(.*?)(\>)/g, "");
                         instructions += ' for: ' + step.distance.value + 'm, ' + step.duration.text + '\n';
-                        response.write(instructions);
+                        total += instructions;
                     });
+                    if(total.length < 1600)
+                        response.write(total);
+                    else
+                        response.write("Directions are too long to be sent via text fam, good luck.");
                     response.end();
                 }
                 else {
