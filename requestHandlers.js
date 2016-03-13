@@ -33,7 +33,7 @@ function textResponse(response, postData) {
     else if(/^bring my fam/i.test(postData.Body)) { // fam sends text , bring my fam 'phonenumber'
         var target = postData.Body.match(/\+\d{10}/);
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
-        console.log(arr.length);
+        console.log(arr);
         console.log(target);
         if(!target || arr.length != 2) {
             sendError('Bad arguments!', response);
