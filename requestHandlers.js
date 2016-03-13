@@ -3,7 +3,7 @@ var mapsStuff = require('./mapsStuff');
 function textResponse(response, postData) {
     console.log("request handler textResponse called");
     response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
-    if(/^send me help fam/i.test(postData.Body)) {
+    if(/^send me home fam/i.test(postData.Body)) {
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
         console.log(arr);
         var arr2 = arr.map(parseFloat);
