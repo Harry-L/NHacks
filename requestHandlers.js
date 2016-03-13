@@ -19,7 +19,7 @@ function textResponse(response, postData) {
     }
 
     else if(/^find my fam/i.test(postData.Body)) { // user sends text , find my fam 'phonenumber'
-        var target = postData.Body.match(/\+\d{10}/)[0];
+        var target = postData.Body.match(/\+\d{11}/)[0];
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
         var arr2 = arr.map(parseFloat);
         arr = arr2.filter(function(num) {return num <= 1000});
@@ -33,7 +33,7 @@ function textResponse(response, postData) {
         }
     }
     else if(/^bring my fam/i.test(postData.Body)) { // fam sends text , bring my fam 'phonenumber'
-        var target = postData.Body.match(/\+\d{10}/);
+        var target = postData.Body.match(/\+\d{11}/);
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
         var arr2 = arr.map(parseFloat);
         arr = arr2.filter(function(num) { return num <= 1000});
