@@ -16,6 +16,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MFMes
     var currentString = ""
     var homeString = ""
     let defaults = NSUserDefaults.standardUserDefaults()
+    var phone = ""
     
     @IBAction func buttonPressed(sender: AnyObject) {
         //sendLocation()
@@ -62,12 +63,27 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MFMes
         homeString = defaults.objectForKey("home") as? String ?? ""
     }
     
+    func getPhone() {
+        phone = defaults.objectForKey("phone") as? String ?? ""
+    }
+    
     func sendText() {
-        print("working")
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
             print("send me home fam cur: \(currentString) des: \(homeString)")
             controller.body = "send me home fam cur: \(currentString) des: \(homeString)"
+            controller.recipients = ["2897960937"]
+            controller.messageComposeDelegate = self
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+    
+    func findMyFam() {
+        getPhone()
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            print("find my fam \(phone) cur: \(currentString)")
+            controller.body = "find my fam \(phone) cur: \(currentString)"
             controller.recipients = ["2897960937"]
             controller.messageComposeDelegate = self
             self.presentViewController(controller, animated: true, completion: nil)

@@ -14,26 +14,32 @@ class FindMyFamViewController: UIViewController, CLLocationManagerDelegate, MFMe
     
     var locationManager: CLLocationManager!
     var currentString = ""
-    var homeString = ""
     let defaults = NSUserDefaults.standardUserDefaults()
+    var phone = ""
 
     @IBOutlet weak var textField: UITextField!
     @IBAction func textChanged(sender: AnyObject) {
         let phone = textField.text
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(phone, forKey: "phone")
-        
     }
+    @IBOutlet weak var textField2: UITextField!
     @IBAction func bringMyFam(sender: AnyObject) {
-        
+    }
+    @IBAction func text2Changed(sender: AnyObject) {
+        phone = "+1\(textField2.text)"
+        sendMyLocation()
     }
     
-    func sendText() {
-        print("working")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        sendLocation()
+    }
+    
+    func sendMyLocation() {
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
-            print("send me home fam cur: \(currentString) des: \(homeString)")
-            controller.body = "send me home fam cur: \(currentString) des: \(homeString)"
+            controller.body = "bring my fam \(phone) \(currentString)"
             controller.recipients = ["2897960937"]
             controller.messageComposeDelegate = self
             self.presentViewController(controller, animated: true, completion: nil)
