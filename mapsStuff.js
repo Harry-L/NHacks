@@ -66,7 +66,7 @@ function getDirs(orig, dest, texthandle) {
                         total += instructions;
                     });
                     if(total.length < 1600)
-                        texthandle.write(total);
+                        texthandle.(total);
                     else
                         texthandle("Directions are too long to be sent via text fam, good luck.");
                 }
