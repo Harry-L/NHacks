@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Find me fam</title>
+    <title> Find My Fam!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
+
     <style>
         
         #map {
@@ -39,12 +39,12 @@
           right: 580px;
           top: 130px;
         }
-        form {
+        #find {
           width: 200px;
           z-index: 0;
           position: absolute;
           right: 580px;
-          top: 230px;
+          top: 180px;
           text-align: center;
         }
         
@@ -68,35 +68,49 @@
 </style>
       
   </head>
-  <body onload="initialize()">
+  <body onload="initMap()">
 
       <div id="map"></div>
 
-      <h1 id = "h">Find Me Fam! <br>Send Help!</h1> 
+      <h1 id = "h">Find My Fam! <br>Send Help!</h1> 
       
       <div id="floating-panel1">
-      <input id="address" type="textbox" value="">
-      <input id="encode" type="button" value="Enter current location ">
+      <input id="address" type="text" value="">
+      <input id="encode" type="button" value="Test w/ coord. or locations">
       </div>
 
       <div id="floating-panel2">
       <input id="latlng" type="text" value="">
-      <input id="decode" type="button" value="Enter geo coordinates">
+      <input id="decode" type="button" value="Find Your Fam!">
       <br>
       </div>
           
-                <form id="inputs">
+        <form id="inputs">
         <strong>Phone Number:</strong><br>
         <input type="text" name="number">
-        <br>
-        <strong>Alternative Number:</strong><br>
-        <input type="text" name="alternative">
-    </form>
-    <br> 
-    <form action="action_page.php">
-    <input type="submit" value="Submit">
-    </form> 
+        </form>
 
+    <br> 
+
+    <input type="submit" id ="find" value="Find phone" onclick="retrieveData()">
+    
+    <script type="text/javascript">
+
+      function retrieveData(){
+      var xhttp = new XMLHttpRequest();
+      
+      var number = document.getElementById("inputs").elements.number.value;
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          document.getElementById("latlng").innerHTML = xmlhttp.responseText;
+        }
+      };
+      xhttp.open("POST","action_page.php?q=" + number, true);
+      xhttp.send();
+
+      }
+
+    </script>
 
     <script>
        function initMap() {
