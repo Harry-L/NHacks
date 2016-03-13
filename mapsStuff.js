@@ -47,11 +47,15 @@ function getDirs(orig, dest, response) {
     reqUrl += '&mode=walking';
     reqUrl += '&key=' + apikey;
 
+    console.log("url: " + reqUrl);
+
     request.post(reqUrl,
         function(error, response2, body) {
             if(!error && response2.statusCode == 200) {
+                console.log("no error, status code fine");
                 var bodyObj = JSON.parse(body);
                 if(bodyObj && bodyObj.routes && bodyObj.routes[0]) {
+                    console.log("bodyObj.routes[0] defined");
                     var responseString = "";
                     var steps = bodyObj.routes[0].legs[0].steps;
                     steps.forEach(function(step) {
