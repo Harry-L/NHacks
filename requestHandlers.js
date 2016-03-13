@@ -4,9 +4,10 @@ function textResponse(response, postData) {
     console.log("request handler textResponse called");
     response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
     if(/^send me help fam/i.test(postData.Body)) {
-        var arr = postData.Body.match(/curr:\s*(-*\d*.*\d*\s+-*\d*.*\d*)\s*dest:\s*(-*\d*.*\d*\s+-*\d*.*\d*)/);
+        var arr = postData.Body.match(/curr:\s*(-*\d*.*\d*\s+-*\d*.*\d*)/);
         console.log(arr);
-        var arr2 = arr[1].split() + arr[2].split();
+        arr += postData.Body.match(/dest:\s*(-*\d*.*\d*\s+-*\d*.*\d*)/);
+        var arr2 = arr[1].split() + arr[3].split();
         arr = arr2.map(parseFloat);
         console.log(arr);
         mapsStuff.getDirs({lat: arr[0], lng: arr[1]}, {lat: arr[2], lng: arr[3]}, response);
