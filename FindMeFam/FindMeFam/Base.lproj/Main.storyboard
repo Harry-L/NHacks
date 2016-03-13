@@ -43,7 +43,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="tOh-jN-xmq" eventType="touchUpInside" id="3wi-4L-LvH"/>
+                                    <action selector="button2Pressed:" destination="tOh-jN-xmq" eventType="touchUpInside" id="ic5-ws-x9d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,7 +171,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textChanged:" destination="qUn-BT-XqS" eventType="editingDidEnd" id="MNT-VF-UMc"/>
+                                    <action selector="textChanged:" destination="qUn-BT-XqS" eventType="editingDidEnd" id="rlh-54-Jiz"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9j-hX-HuI">
@@ -180,9 +180,6 @@
                                 <state key="normal" title="Bring my fam">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="bringMyFam:" destination="qUn-BT-XqS" eventType="touchUpInside" id="Qjr-yO-fRR"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fam's phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9D-x0-rk0">
                                 <rect key="frame" x="205" y="278" width="190" height="30"/>
@@ -192,7 +189,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="text2Changed:" destination="qUn-BT-XqS" eventType="editingDidEnd" id="1Ca-5f-cEI"/>
+                                    <action selector="text2Changed:" destination="qUn-BT-XqS" eventType="editingDidEnd" id="0Dq-sN-vMX"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -208,8 +205,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="lyW-wt-UwA" id="qEK-fP-xeQ"/>
-                        <outlet property="textField2" destination="A9D-x0-rk0" id="vXf-q9-162"/>
+                        <outlet property="textField" destination="lyW-wt-UwA" id="hyy-d7-UCT"/>
+                        <outlet property="textField2" destination="A9D-x0-rk0" id="mz3-so-ggC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yL3-Oa-cMd" userLabel="First Responder" sceneMemberID="firstResponder"/>

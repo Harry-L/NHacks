@@ -19,21 +19,31 @@ class FindMyFamViewController: UIViewController, CLLocationManagerDelegate, MFMe
 
     @IBOutlet weak var textField: UITextField!
     @IBAction func textChanged(sender: AnyObject) {
-        let phone = textField.text
+        let phone = "+1\(textField!.text!)"
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(phone, forKey: "phone")
     }
     @IBOutlet weak var textField2: UITextField!
-    @IBAction func bringMyFam(sender: AnyObject) {
-    }
     @IBAction func text2Changed(sender: AnyObject) {
-        phone = "+1\(textField2.text)"
+        phone = "+1\(textField2!.text!)"
         sendMyLocation()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        keyboardListener()
+        initLocationManager()
         sendLocation()
+    }
+    
+    func keyboardListener() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func sendMyLocation() {
@@ -70,7 +80,4 @@ class FindMyFamViewController: UIViewController, CLLocationManagerDelegate, MFMe
         manager.stopUpdatingLocation()
         //label.text = "locations = \(locValue.latitude) \(locValue.longitude)"
     }
-    
-    
-    
 }

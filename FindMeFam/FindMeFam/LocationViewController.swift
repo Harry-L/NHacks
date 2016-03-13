@@ -23,6 +23,9 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MFMes
         sendText()
     }
     
+    @IBAction func button2Pressed(sender: AnyObject) {
+        findMyFam()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
