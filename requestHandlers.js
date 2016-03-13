@@ -4,13 +4,11 @@ function textResponse(response, postData) {
     console.log("request handler textResponse called");
     response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
     if(/^send me help fam/i.test(postData.Body)) {
-        var arr = postData.Body.match(/curr:\s*(-*\d*.*\d*\s+-*\d*.*\d*)/);
+        var arr = postData.Body.match(/-?\d*.*\d*/g);
         console.log(arr);
-        arr += postData.Body.match(/dest:\s*(-*\d*.*\d*\s+-*\d*.*\d*)/);
-        var arr2 = arr[1].split() + arr[3].split();
-        arr = arr2.map(parseFloat);
-        console.log(arr);
-        mapsStuff.getDirs({lat: arr[0], lng: arr[1]}, {lat: arr[2], lng: arr[3]}, response);
+        var arr2 = Array.prototype.map.call(arr, parseFloat);
+        console.log(arr2);
+        mapsStuff.getDirs({lat: arr2[0], lng: arr2[1]}, {lat: arr2[2], lng: arr2[3]}, response);
     }
     else {
         var directionsString = "No handler for request, to: " + postData.To + " From: " + postData.From + " body: " + postData.Body;
