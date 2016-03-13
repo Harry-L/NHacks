@@ -20,7 +20,9 @@ function textResponse(response, postData) {
 
     else if(/^find my fam/i.test(postData.Body)) { // user sends text , find my fam 'phonenumber'
         var target = postData.Body.match(/\+\d{10}/)[0];
-        var arr = postData.Body.match(/-?\d+\.?\d*/g);
+        var arr = postData.Body.match(/-?\d+\.?\d*/g);i
+        var arr2 = arr.map(parseFloat);
+        arr = arr2.filter(function(num) {return num <= 1000});
         if(!target || arr.length != 2) {
             sendError('Bad arguments!', response); 
         }
@@ -33,6 +35,8 @@ function textResponse(response, postData) {
     else if(/^bring my fam/i.test(postData.Body)) { // fam sends text , bring my fam 'phonenumber'
         var target = postData.Body.match(/\+\d{10}/);
         var arr = postData.Body.match(/-?\d+\.?\d*/g);
+        var arr2 = arr.map(parseFloat);
+        arr = arr2.filter(function(num) { return num <= 1000});
         console.log(arr);
         console.log(target);
         if(!target || arr.length != 2) {
