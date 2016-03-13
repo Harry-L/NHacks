@@ -16,6 +16,7 @@
 		4A6D96131C947F2B00CCBED8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96121C947F2B00CCBED8 /* LocationViewController.swift */; };
 		4A6D96151C94CC7700CCBED8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6D96141C94CC7700CCBED8 /* MapKit.framework */; };
 		4A6D96171C94CF0700CCBED8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D96161C94CF0700CCBED8 /* MapViewController.swift */; };
+		4A6D961D1C955D1C00CCBED8 /* FindMyFamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D961C1C955D1C00CCBED8 /* FindMyFamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4A6D96121C947F2B00CCBED8 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		4A6D96141C94CC7700CCBED8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4A6D96161C94CF0700CCBED8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4A6D961C1C955D1C00CCBED8 /* FindMyFamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMyFamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				4A6D96101C9478F300CCBED8 /* ViewController.swift */,
 				4A6D96121C947F2B00CCBED8 /* LocationViewController.swift */,
 				4A6D96161C94CF0700CCBED8 /* MapViewController.swift */,
+				4A6D961C1C955D1C00CCBED8 /* FindMyFamViewController.swift */,
 			);
 			path = FindMeFam;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				4A6D96111C9478F300CCBED8 /* ViewController.swift in Sources */,
 				4A6D95FB1C9468BB00CCBED8 /* AppDelegate.swift in Sources */,
+				4A6D961D1C955D1C00CCBED8 /* FindMyFamViewController.swift in Sources */,
 				4A6D960F1C94700800CCBED8 /* PageViewController.swift in Sources */,
 				4A6D96171C94CF0700CCBED8 /* MapViewController.swift in Sources */,
 				4A6D96131C947F2B00CCBED8 /* LocationViewController.swift in Sources */,

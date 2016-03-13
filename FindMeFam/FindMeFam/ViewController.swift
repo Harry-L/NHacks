@@ -12,8 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initColor();
         // Do any additional setup after loading the view.
+    }
+    
+    func initColor() {
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,6 +18,17 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         dataSource = self
         initViewControllers()
         initFirstController()
+        initColors()
+        
+        self.navigationController!.interactivePopGestureRecognizer!.enabled = false
+    }
+    
+    func initColors() {
+        let layer = CAGradientLayer()
+        layer.frame = view.frame
+        layer.colors = [UIColor.init(red: 0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1).CGColor, UIColor.init(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1).CGColor]
+        layer.zPosition = -1
+        view.layer.addSublayer(layer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +43,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func initViewControllers() {
-        for i in 1 ... 3 {
+        for i in 1 ... 2 {
             views.append(newViewController(i))
         }
     }
@@ -44,8 +55,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
             s = "First"
         case 2:
             s = "Second"
-        case 3:
-            s = "Third"
         default:
             s = "First"
         }
@@ -112,8 +121,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         }
         super.viewDidLayoutSubviews()
     }
-    
-    
 
     /*
     // MARK: - Navigation

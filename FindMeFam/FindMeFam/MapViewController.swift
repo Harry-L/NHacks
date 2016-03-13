@@ -14,6 +14,9 @@ class MapViewController: UIViewController, UISearchBarDelegate {
 
     @IBAction func showSearchBar(sender: AnyObject) {
         searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.barTintColor = UIColor.init(red: 0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1)
+        searchController.searchBar.keyboardAppearance = .Dark
+        searchController.searchBar.tintColor = UIColor.whiteColor()
         searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.searchBar.delegate = self
         presentViewController(searchController, animated: true, completion: nil)
@@ -31,6 +34,12 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        initColor()
+    }
+    
+    func initColor() {
+        navigationController!.navigationBar.barTintColor = UIColor.init(red: 0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1)
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,8 +75,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
         }
     }
-    
-
     
     // MARK: - Navigation
 

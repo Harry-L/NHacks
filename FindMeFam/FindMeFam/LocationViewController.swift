@@ -25,10 +25,26 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MFMes
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        initLooks()
         initLocation()
         getHomeLocation()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         sendLocation()
+    }
+    
+    func initLooks() {
+        navigationController!.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+
+        let layer = CAGradientLayer()
+        layer.frame = view.frame
+        layer.colors = [UIColor.init(red: 0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1).CGColor, UIColor.init(red: 44.0/255.0, green: 62.0/255.0, blue: 80.0/255.0, alpha: 1).CGColor]
+        layer.zPosition = -1
+        view.layer.addSublayer(layer)
     }
     
     func initLocation() {
@@ -47,6 +63,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MFMes
     }
     
     func sendText() {
+        print("working")
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
             print("send me home fam cur: \(currentString) des: \(homeString)")
@@ -85,16 +102,16 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MFMes
     
     func sendLocation() {
         locationManager.startUpdatingLocation()
-        print("working")
+        //print("working")
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        //print("locations = \(locValue.latitude) \(locValue.longitude)")
         currentString = "\(locValue.latitude) \(locValue.longitude)"
+        manager.stopUpdatingLocation()
         //label.text = "locations = \(locValue.latitude) \(locValue.longitude)"
     }
-    
 
     /*
     // MARK: - Navigation
