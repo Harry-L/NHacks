@@ -97,9 +97,16 @@
     <script type="text/javascript">
 
       function retrieveData(){
-      var xhttp = new XMLHttpRequest();
+      //var xhttp = new XMLHttpRequest();
       
       var number = document.getElementById("inputs").elements.number.value;
+
+      $.post("http://still-eyrie-93764.herokuapp.com/request", {sent: number}, function (data) {
+            // can use 'data' in here...
+          console.log(data);
+          return data;
+          });
+/*
       xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
           document.getElementById("latlng").innerHTML = xhttp.responseText;
@@ -108,7 +115,7 @@
       xhttp.open("POST","http://still-eyrie-93764.herokuapp.com/request", true);
       xhttp.setRequestHeader("Content-Type", "text/plain");
       xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
-      xhttp.send(number);
+      xhttp.send(number);*/
 
       }
 
