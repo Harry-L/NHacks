@@ -33,7 +33,7 @@ function add(phone, lat, lng, fam, isLook) {
                 }
                 else {
                     var boolStr = isLook? "TRUE": "FALSE";
-                    var temp2 = client.query("INSERT INTO famtables VALUES ('" + phone + "', " + lat + ", " + lng + ", '" + fam + "', " + boolStr +")");
+                    var temp2 = client.query("INSERT INTO famtable VALUES ('" + phone + "', " + lat + ", " + lng + ", '" + fam + "', " + boolStr +")");
                 }
             });
             done();
