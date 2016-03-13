@@ -63,20 +63,19 @@ function textResponse(response, postData) {
 
 function request(response, postData) {
     console.log("request handler for request called");
+    console.log("postdata: " + postData);
    mypsql.get(postData, function(result) {
         sendError(result.lastlat + ", " + result.lastlng, response);
    });
 }
 
 function sendError(text, response) {
-    response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
     response.write(text);
     response.end();
 }
 
 function start(response, postData) {
     console.log("request handler start called");
-    response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin": "*"});
     response.write("lo");
     response.end();
 }

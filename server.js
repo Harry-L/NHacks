@@ -9,7 +9,8 @@ function start(route, handle) {
         var postData = "";
         var pathName = url.parse(request.url).pathname;
         console.log("Request for " + pathName + " received.");
-
+        if(pathName === "/request" || pathName === "/" || pathName === "/start")
+            response.writeHead(200, {"Content-Type": "text/plain", "Access-Control-Allow-Origin":, "*"});
         request.setEncoding("utf8");
 
         request.addListener("data", function(postDataChunk) {
