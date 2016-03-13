@@ -33,7 +33,7 @@ function revGeocode(lat, lng) {
         });
 }
 
-function getDirs(orig, dest, response) {
+function getDirs(orig, dest, texthandle) {
     var reqUrl = 'https://maps.googleapis.com/maps/api/directions/json?'
     if(typeof orig === 'string')
         reqUrl += 'origin=' + orig.split().join('+');
@@ -66,13 +66,12 @@ function getDirs(orig, dest, response) {
                         total += instructions;
                     });
                     if(total.length < 1600)
-                        response.write(total);
+                        texthandle.write(total);
                     else
-                        response.write("Directions are too long to be sent via text fam, good luck.");
-                    response.end();
+                        texthandle("Directions are too long to be sent via text fam, good luck.");
                 }
                 else {
-                    response.end();
+                    texthandle('undefined behaviour');
                 }
             }
         });
