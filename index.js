@@ -6,6 +6,6 @@ var handle = {};
 handle["/"] = requestHandlers.textResponse;
 handle["/start"] = requestHandlers.start;
 
-console.log("wtf");
+console.log("SERVER IS ABOUT TO START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
 server.start(router.route, handle);
