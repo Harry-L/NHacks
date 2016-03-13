@@ -62,6 +62,7 @@ function textResponse(response, postData) {
 }
 
 function request(response, postData) {
+    console.log("request handler for request called");
    mypsql.get(postData, function(result) {
         sendError(result.lastlat ", " + result.lastlng, response);
    });
