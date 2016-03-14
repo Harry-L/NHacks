@@ -1,6 +1,5 @@
 var pg = require('pg');
 var dUrl = process.env.DATABASE_URL;
-//var dUrl = "postgres://wcojikkqvxumea:d4X_fRqgz_R6UWHUwz0F8UY4Cb@ec2-54-83-57-25.compute-1.amazonaws.com:5432/dbp49777j7q9e8";
 
 function set(phone, lat, lng, fam, isLook) {
 

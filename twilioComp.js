@@ -1,19 +1,24 @@
-var accSid = "ACe750bf0cc2e09c20b8a67262b968fcef";
-var authToken = "01eff6b1be1aacd40cb1877c3170188b";
-var client = require('twilio')(accSid, authToken);
-
-var resp = new require('twilio').TwimlResponse();
+var fs = require('fs');
 
 function sendText(targetNum, bodyText) {
-    console.log("sending text");
-    client.messages.create({
-        to: targetNum,
-        from: '+12897960937',
-        body: bodyText
-    }, function(error, message) {
-        if(error)
-            console.log(error.message);
-    });
+
+	fs.readFile('keys/accSid', 'utf8', function(error1, accSid) {
+		fs.readFile('keys/authToken', 'utf8', function(error2, authToken) {
+			var client = require('twilio')(accSid, authToken);
+			var resp = new require('twilio').TwimlResponse();
+			console.log("sending text");
+    		client.messages.create({
+        		to: targetNum,
+        		from: '+12897960937',
+        		body: bodyText
+    		}, function(error, message) {
+        		if(error)
+            		console.log(error.message);
+    		});
+		});
+	});
+
+    
 }
 
 exports.sendText = sendText;
